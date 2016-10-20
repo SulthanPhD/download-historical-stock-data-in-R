@@ -1,12 +1,12 @@
 ####Using quantmod####
 ####Single Stock data####
-suppressPackageStartupMessages(library(quantmod))
-getSymbols("WIPRO.Ns", from="2015-01-01", to="2015-02-22")
+if(!require(quantmod)){install.packages("quantmod")}
+getSymbols("WIPRO.Ns", from="2015-01-01", to="2016-10-20")
 #### multiple Stocks data Method-1 (each as seperate dataset) ####
-getSymbols(c("WIPRO.NS","TCS.NS","INFY.NS"), from="2015-01-01", to="2015-02-22")
+getSymbols(c("WIPRO.NS","TCS.NS","INFY.NS"), from="2015-01-01", to="2016-10-20")
 #### multiple Stocks Method-2 (using list)####
 stocklist <- c("WIPRO.NS","TCS.NS","INFY.NS","AAPL")
-getSymbols(stocklist, from="2015-01-01", to="2015-02-14")
+getSymbols(stocklist, from="2015-01-01", to="2016-10-20")
 ####multiple Stocks Method-3####
 stocklist <- c("WIPRO.NS","TCS.NS","INFY.NS","AAPL") # create list of stock tickers
 Adjclose <- NULL
