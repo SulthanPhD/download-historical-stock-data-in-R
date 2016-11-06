@@ -1,10 +1,10 @@
 ####Using quantmod####
 ####Single Stock data####
 if(!require(quantmod)){install.packages("quantmod")}
-getSymbols("WIPRO.Ns", from="2015-01-01", to= Sys.Date())
+getSymbols("WIPRO.NS", from="2015-01-01", to= Sys.Date())
 
 #### multiple Stocks data Method-1 (each as seperate dataset) ####
-getSymbols("WIPRO.NS;TCS.NS;INFY.NS", from="2015-01-01", to= sys.Date())
+getSymbols("WIPRO.NS;TCS.NS;INFY.NS", from="2015-01-01", to= Sys.Date())
 
 #### multiple Stocks Method-2 (using list)####
 stocklist <- c("WIPRO.NS","TCS.NS","INFY.NS","AAPL" )
